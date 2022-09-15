@@ -2,11 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'inter', sans-serif;
 }
 
-ul {
-    list-style: none;
-}
 
 body {
     background-image: url(./assets/Fundo.jpg);
@@ -16,22 +14,37 @@ body {
     background-color: #121214;
 }
 
-body * {
-    font-family: 'inter', sans-serif;
+header {
+    max-width: 200px;
+    width: 90%;
+    margin: auto;
+}
+
+#profile-image {
+    max-width: 200px;
+    margin: auto;
+    margin-top: 10px;
+    color: white;
+    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+    padding: 4px;
+    border-radius: 50%;
 }
 
 
 main {
-    max-width: 500px;
-    width: 98%;
+    max-width: 750px;
+    width: 90%;
     margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 section {
     color: white;
     background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
     padding-top: 4px;
-    border-radius: 10 px;
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
 section div {
@@ -41,12 +54,16 @@ section div {
     border-radius: 8px;
 }
 
+ul {
+    list-style: none;
+}
+
 section-h2 {
     letter-spacing: -0,47px;
 }
 
 section p {
-    letter-spacing: -0,19;
+    letter-spacing: -0,19px;
     color: #a1a1aa;
 }
 
@@ -58,7 +75,12 @@ section ul {
 }
 
 .games-list img {
-    width: 90px;
+    width: 100px;
     border-radius: 8px;
 
+}
+
+.channel-list img {
+    width: 100px;
+    border-radius: 500%;
 }
