@@ -1,9 +1,23 @@
+/* ---------------------------Formatação do arquivo----------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'inter', sans-serif;
 }
+
+ul {
+    list-style: none;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+
 
 
 body {
@@ -15,42 +29,42 @@ body {
 }
 
 header {
-    max-width: 200px;
-    height: 120px;
-    width: 90%;
-    margin: auto;
+    padding-top: 32px;
+    height: 150px;
 }
 
-#profile-image:hover {
-    transform: scale(1.1);
-}
-
-#profile-image {
+header div {
     width: 120px;
     margin: auto;
-    margin-top: 10px;
-    color: white;
-    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
     display: flex;
     padding: 4px;
-    border-radius: 50%;
     transition: transform .3s;
 }
 
+header div:hover {
+    transform: scale(1.1)
+}
+
+header div img {
+    width: 100%;
+    border-radius: 50%;
+}
+
 main {
-    max-width: 750px;
+    max-width: 580px;
     width: 90%;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 32px auto;
+    display: grid;
+    gap: 24px;
 }
 
 section {
     color: white;
-    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
     padding-top: 4px;
-    border-radius: 8px;
-    margin-top: 20px;
+    border-radius: 10px;
 }
 
 section div {
@@ -60,17 +74,13 @@ section div {
     border-radius: 8px;
 }
 
-ul {
-    list-style: none;
-}
-
-section-h2 {
-    letter-spacing: -0,47px;
+section h2 {
+    letter-spacing: -0.47px;
 }
 
 section p {
-    letter-spacing: -0,19px;
-    color: #a1a1aa;
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
 }
 
 section ul {
@@ -85,32 +95,62 @@ section ul li {
 }
 
 section ul li:hover {
-    transform: scale(1.1);
+    transform: scale(1.1)
 }
 
 .games-list img {
-    width: 100px;
+    width: 90px;
     border-radius: 8px;
-
 }
 
 .channel-list img {
-    width: 100px;
-    border-radius: 500%;
+    border-radius: 50%; 
+    width: 70px;
+    border: 1px solid #443E54;
 }
 
-/* Animation */
-#profile-image {
-    animation: FromTop .7s .4s backawards;
-    animation-delay: 1s;
+/* -----------------------------animation--------------------------------- */
+
+header div {
+    animation: fromTop .7s .2s backwards;
 }
 
-@keyframes FromTop {
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .3s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .6s;
+}
+
+@keyframes fromTop {
     from {
+        opacity: 0;
         transform: translateY(-30px)
     }
 
-    to{
-        transform: translateY(0);
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
     }
 }
