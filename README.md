@@ -1,3 +1,0 @@
-# nlw-esports
-
-Em desenvolvimento
